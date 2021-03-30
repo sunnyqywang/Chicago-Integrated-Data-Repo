@@ -5,6 +5,7 @@ __pycache__/
 
 # process folder
 process/
+data/
 
 # C extensions
 *.so
