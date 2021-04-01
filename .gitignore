@@ -7,6 +7,9 @@ __pycache__/
 process/
 data/
 
+# credentials
+*/credentials.py
+
 # C extensions
 *.so
 
