@@ -40,14 +40,14 @@ and (14) others.
 
 Universities, research centers, governments, and individual researchers
 have collected useful meta information about data sources. Resources
-include: data libraries from **Northwestern University**[1], data sets
+include: data libraries from **Northwestern University**[[1]], data sets
 by complex and sustainable urban networks (CSUN) lab from **University
-of Illinois at Chicago**[2], GIS data by **University of
-Illinois**[3], **City of Chicago Data Portal**[4], **Illinois DOT Open
-Data Portal**[5], **US Bureau of Transportation Statistics**[6], **US
-DOT data inventory**[7], **NREL Transport Data Center**[8], and
-personal websites by **researchers**[9]. **Papers** and agents'
-**modeling reports** are also entry points to data sets[10].
+of Illinois at Chicago**[[2]], GIS data by **University of
+Illinois**[[3]], **City of Chicago Data Portal**[[4]], **Illinois DOT Open
+Data Portal**[[5]], **US Bureau of Transportation Statistics**[[6]], **US
+DOT data inventory**[[7]], **NREL Transport Data Center**[[8]], and
+personal websites by **researchers**[[9]]. **Papers** and agents'
+**modeling reports** are also entry points to data sets[[10]].
 
 [1]: <https://libguides.northwestern.edu/c.php?g=114808&p=748275>
 [2]: <http://csun.uic.edu/datasets.html>
