@@ -1,7 +1,7 @@
 # Integrated Smart Chicago Data Set
-Shenhao Wang
-March -- May, 2021
-Draft 1
+Shenhao Wang \\
+March -- May, 2021 \\
+Draft 1 \\
 
 ## Motivation and Background
 
