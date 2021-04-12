@@ -268,7 +268,7 @@ Contents. \[TBD\].
 Resources. The raw GTFS data for CTA and Metra can be found on
 **OpenMobilityData website**[[51]],[[52]]. General intro is from
 Google[[53]]. The most efficient way to download the data set is through
-the **modules on Github**[[54.1][54.2]],[[55.1][55.2]].
+the **modules on Github**[[54.1]][[54.2]],[[55.1]][[55.2]].
 
 Remaining questions and TBD. (1) Explore the exact information in GTFS
 data set by using the Github modules.
