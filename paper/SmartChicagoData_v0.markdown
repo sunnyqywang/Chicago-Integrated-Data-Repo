@@ -4,9 +4,9 @@ March -- May, 2021
 
 Draft 1
 
-Integrated Smart Chicago Data Set
+# Integrated Smart Chicago Data Set
 
-# Motivation and Background
+## Motivation and Background
 
 Data is the fuel to research. However, researchers are increasingly
 limited by data availability. When the big data era calls for innovative
@@ -36,18 +36,29 @@ and Point-of-Interests, (11) mobility-related data (COVID, air
 pollution, energy), (12) web scraping data, (13) private data providers,
 and (14) others.
 
-# 1 - Meta data sets
+## 1 - Meta data sets
 
 Universities, research centers, governments, and individual researchers
 have collected useful meta information about data sources. Resources
-include: data libraries from **Northwestern University**[^1], data sets
+include: data libraries from **Northwestern University**[1], data sets
 by complex and sustainable urban networks (CSUN) lab from **University
-of Illinois at Chicago**[^2], GIS data by **University of
-Illinois**[^3], **City of Chicago Data Portal**[^4], **Illinois DOT Open
-Data Portal**[^5], **US Bureau of Transportation Statistics**[^6], **US
-DOT data inventory**[^7], **NREL Transport Data Center**[^8], and
-personal websites by **researchers**[^9]. **Papers** and agents'
-**modeling reports** are also entry points to data sets[^10].
+of Illinois at Chicago**[2], GIS data by **University of
+Illinois**[3], **City of Chicago Data Portal**[4], **Illinois DOT Open
+Data Portal**[5], **US Bureau of Transportation Statistics**[6], **US
+DOT data inventory**[7], **NREL Transport Data Center**[8], and
+personal websites by **researchers**[9]. **Papers** and agents'
+**modeling reports** are also entry points to data sets[10].
+
+[1]: <https://libguides.northwestern.edu/c.php?g=114808&p=748275>
+[2]: <http://csun.uic.edu/datasets.html>
+[3]: <https://www.uis.edu/gis/projects/data/>
+[4]: <https://data.cityofchicago.org/>
+[5]: <https://gis-idot.opendata.arcgis.com/>
+[6]: <https://www.bts.gov/browse-statistical-products-and-data>
+[7]: <https://www.transportation.gov/data>
+[8]: <https://www.nrel.gov/transportation/secure-transportation-data/>
+[9]: <http://urban-computing.com/yuzheng>
+[10]: <https://cmap-repos.github.io/cmap_abm_report/#1>
 
 # 2 - Socio-demographics and commuting data from census, ACS, and CTPP
 
@@ -352,26 +363,6 @@ Remaining questions. (1) How to collect high-resolution spatiotemporal
 weather information? (2) Is it possible to get CDR data without private
 collaboration? (3) What happened to city of Milan, where the CDR data is
 open to the public?
-
-[^1]: <https://libguides.northwestern.edu/c.php?g=114808&p=748275>
-
-[^2]: <http://csun.uic.edu/datasets.html>
-
-[^3]: <https://www.uis.edu/gis/projects/data/>
-
-[^4]: <https://data.cityofchicago.org/>
-
-[^5]: <https://gis-idot.opendata.arcgis.com/>
-
-[^6]: <https://www.bts.gov/browse-statistical-products-and-data>
-
-[^7]: <https://www.transportation.gov/data>
-
-[^8]: <https://www.nrel.gov/transportation/secure-transportation-data/>
-
-[^9]: <http://urban-computing.com/yuzheng>
-
-[^10]: <https://cmap-repos.github.io/cmap_abm_report/#1>
 
 [^11]: <https://www.fhwa.dot.gov/planning/census_issues/ctpp/>
 
