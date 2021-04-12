@@ -1,11 +1,11 @@
+# process folder
+process/
+data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# process folder
-process/
-data/
 
 # C extensions
 *.so
