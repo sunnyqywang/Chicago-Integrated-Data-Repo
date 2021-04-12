@@ -1,10 +1,7 @@
-Shenhao Wang
-
-March -- May, 2021
-
-Draft 1
-
 # Integrated Smart Chicago Data Set
+Shenhao Wang
+March -- May, 2021
+Draft 1
 
 ## Motivation and Background
 
@@ -60,7 +57,7 @@ personal websites by **researchers**[[9]]. **Papers** and agents'
 [9]: <http://urban-computing.com/yuzheng>
 [10]: <https://cmap-repos.github.io/cmap_abm_report/#1>
 
-# 2 - Socio-demographics and commuting data from census, ACS, and CTPP
+## 2 - Socio-demographics and commuting data from census, ACS, and CTPP
 
 Contents. **Census** and **American Community Survey (ACS)** can provide
 the socio-demographics for counties, census tracts, census block groups,
@@ -76,34 +73,71 @@ ACS, State DOTs also fund a cooperative program -- **Census
 Transportation Planning Products (CTPP)** -- for transport community.
 CTPP provides information for home, work locations, and travel flows at
 relatively high granularity (e.g. down to Census tracts and TAZs) for
-2006-2010 and 2012-2016[^11]^,^[^12]. **National Household Travel Survey
-2017**[^13] is the source for general travel behavior in the US,
+2006-2010 and 2012-2016[[11]],[[12]]. **National Household Travel Survey
+2017**[[13]] is the source for general travel behavior in the US,
 although its sampling did not cover the whole US. The NHTS 2017 data
 have about **six state add-on's** at the census tract level, including
-**Arizona, California**[^14]**, Wisconsin, Georgia,** and **Iowa**[^15].
+**Arizona, California**[[14]]**, Wisconsin, Georgia,** and **Iowa**[[15]].
 For the state add on's, researchers can apply for geospatial data more
-granular than the census tract level (e.g. **California**[^16]). Since
+granular than the census tract level (e.g. **California**[[16]]). Since
 NHTS2017 does not cover the whole US, the **Bureau of Transportation
 Statistics (BTS)** estimated trips and vehicle miles (**LATCH
-Survey**[^17]) for all the census tracts of the US based on the NHTS2017
+Survey**[[17]]) for all the census tracts of the US based on the NHTS2017
 data.
 
 Resources. It is more efficient to download the data sets using R and
 Python modules than directly from Census websites. The coding modules
-include **Python CensusData**[^18]^,^[^19] and **R tidycensus**[^20].
+include **Python CensusData**[[18]],[[19]] and **R tidycensus**[[20]].
 Please avoid directly downloading data sets from Census
-Bureau[^21]^,^[^22]^,^[^23]^,^[^24], which does not provide a friendly
+Bureau[[21]],[[22]],[[23]],[[24]], which does not provide a friendly
 user interface. The high-level census summary for every state (e.g.
-Illinois) can be found in the **FTP**[^25]^,^[^26] by Census Bureau.
-CTPP data can be downloaded from the **official software**[^27] or the
-**R modules**[^28] on Github. The most recent 2020 Census data will be
+Illinois) can be found in the **FTP**[[25]],[[26]] by Census Bureau.
+CTPP data can be downloaded from the **official software**[[27]] or the
+**R modules**[[28]] on Github. The most recent 2020 Census data will be
 released on April 30, 2021. Stay tuned.
 
 Remaining questions and TBD. (1) Explore the public use microdata from
 Census. (2) Explore the micro data from CTPP. (3) Why was CTPP stopped
 after 2016?
 
-# 3 - GIS Shapefiles
+[11]: <https://www.fhwa.dot.gov/planning/census_issues/ctpp/>
+
+[12]: <https://ctpp.transportation.org/>
+
+[13]: <https://nhts.ornl.gov/>
+
+[14]: <https://nhts.dot.ca.gov/>
+
+[15]: <https://www.nrel.gov/transportation/secure-transportation-data/tsdc-cleansed-data.html>
+
+[16]: <https://nhts.dot.ca.gov/>
+
+[17]: <https://www.bts.dot.gov/latch>
+
+[18]: <https://jtleider.github.io/censusdata/>
+
+[19]: <https://github.com/jtleider/censusdata>
+
+[20]: <https://cran.r-project.org/web/packages/tidycensus/tidycensus.pdf>
+
+[21]: <https://data.census.gov/cedsci/all?g=0500000US17031.100000>
+
+[22]: <https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/tiger-line-demo-record-layouts.html>
+
+[23]: <https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-data.html>
+
+[24]: <https://www2.census.gov/geo/>
+
+[25]: <https://www2.census.gov/geo/pdfs/reference/guidestloc/>
+
+[26]: <https://www2.census.gov/geo/pdfs/reference/guidestloc/17_Illinois.pdf>
+
+[27]: <http://data5.ctpp.transportation.org/ctpp/Browse/browsetables.aspx>
+
+[28]: <https://github.com/gregmacfarlane/ctpp_flows>
+
+
+## 3 - GIS Shapefiles
 
 Contents. GIS shapefiles are provided by census: **Topologically
 Integrated Geographic Encoding and Referencing (TIGER)**, which includes
@@ -115,19 +149,39 @@ systems, such as the road networks, transit stations and lines, building
 footprints, land use parcels, natural resources.
 
 Resources. TIGER/Line GIS shapefiles can be downloaded from **Census
-Bureau** with or without the demographic data[^29]^,^[^30]. The
+Bureau** with or without the demographic data[[29]],[[30]]. The
 important indicators are the GEOIDs, e.g. 11-digit Census Tract
-FIPS[^31]. See also the GIS files provided by **universities**,
+FIPS[[31]]. See also the GIS files provided by **universities**,
 **governments** (**Illinois**), and **City of Chicago data portal,
-Illinois DOT data portal**[^32]^,^[^33]^,^[^34]^,^[^35]. The shapefiles
+Illinois DOT data portal**[[32]],[[33]],[[34]],[[35]]. The shapefiles
 of transport networks (e.g. bus, transit, and Metra stations and lines;
-bike routes and racks[^36]) can be found on **City of Chicago Data
-Portal**[^37]. For other GIS resources (e.g. buildings, land use, water,
+bike routes and racks[[36]]) can be found on **City of Chicago Data
+Portal**[[37]]. For other GIS resources (e.g. buildings, land use, water,
 natural resources, etc.), please refer to the **OpenStreetMap** section.
 
 Remaining questions. None.
 
-# 4 - Mobility flow
+[29]: <https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-data.html>
+
+[30]: <https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html>
+
+[31]: <https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html>
+
+[32]: <http://www.gis2gps.com/GIS/illcounties/illcounties.html>
+
+[33]: <https://www.uis.edu/gis/projects/data/>
+
+[34]: <https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-ZIP-Codes/gdcf-axmw>
+
+[35]: <https://gis-idot.opendata.arcgis.com/>
+
+[36]: <https://data.cityofchicago.org/Transportation/Bike-Racks-Map/4ywc-hr3a>
+
+[37]: <https://data.cityofchicago.org/browse?q=transit&sortBy=relevance&tags=shapefiles>
+
+
+
+## 4 - Mobility flow
 
 Mobility data (From 4 to 8) always involves the tradeoff between spatial
 scope, spatial resolution, and temporal resolution. Large spatial scope
@@ -145,16 +199,16 @@ origin, destination, and the flow counts between OD pairs.
 
 Resources. Two major public resources exist, and both are largely
 cross-sectional data. The first is the **ACS commuting** data set
-provided by CTPP[^38][^39], which covers the whole US at the census
+provided by CTPP[[38]][[39]], which covers the whole US at the census
 tract level. The data can be efficiently downloaded from the websites on
-the published papers[^40]. The second is the **LEHD Origin-Destination
-Employment Statistics (LODES)**[^41]^,^[^42], which provides the
+the published papers[[40]]. The second is the **LEHD Origin-Destination
+Employment Statistics (LODES)**[[41]],[[42]], which provides the
 commuting OD flows for each state at the census block group level, along
 with work and residential details. LODES is a panel data, collected for
 every year -- the most recent data was the 2017 commuting data, released
 in Dec 2020. Lastly, a recent Scientific Data paper provides a
 **multiscale dynamic human mobility flow data set** (daily average) for
-mobility at the census tract level after the eruption of COVID[^43].
+mobility at the census tract level after the eruption of COVID[[43]].
 Besides, the OD flows can be constructed by using travel survey,
 spatiotemporal ridership, and data sets from private companies.
 
@@ -162,7 +216,20 @@ Remaining questions and TBD. (1) Explore other public large-scale OD
 flow data sources. (2) What does the LODES data look like? (3) How to
 obtain a OD matrix for only public transit?
 
-5 -- Spatiotemporal ridership
+
+[38]: <https://www.fhwa.dot.gov/planning/census_issues/ctpp/>
+
+[39]: <https://github.com/gregmacfarlane/ctpp_flows>
+
+[40]: <https://journals.plos.org/plosone/article?id=info%3Adoi/10.1371/journal.pone.0166083>
+
+[41]: <https://lehd.ces.census.gov/data/#top>
+
+[42]: <https://lehd.ces.census.gov/data/lodes/LODES7/LODESTechDoc7.5.pdf>
+
+[43]: <https://www.nature.com/articles/s41597-020-00734-5>
+
+## 5 -- Spatiotemporal ridership
 
 Contents. The spatiotemporal ridership data refer to the **real-time
 individualized mobility** data sets. The data sets often include the
@@ -172,26 +239,56 @@ lines, TNCs, micro-mobility, Divvy, and taxi**.
 
 Resources. They are provided by the **City of Chicago data portal**, for
 a variety of travel modes, including buses, subway lines, Metra,
-TNCs[^44], micro-mobility[^45]^,^[^46]^,^[^47]^,^[^48], Divvy[^49], and
-taxi[^50] in the City of Chicago. The real-time bus and subway lines'
+TNCs[[44]], micro-mobility[[45]],[[46]],[[47]],[[48]], Divvy[[49]], and
+taxi[[50]] in the City of Chicago. The real-time bus and subway lines'
 ridership is provided by the **collaboration with CTA**.
 
 Remaining questions and TBD. (1) How can we get the individualized
 spatiotemporal ridership of automobiles?
 
-6 -- General Transit Feed Specification (GTFS)
+[44]: <https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips/m6dm-c72p>
+
+[45]: <https://data.cityofchicago.org/Transportation/E-Scooter-Trips-2019-Pilot/2kfw-zvte>
+
+[46]: <https://data.cityofchicago.org/browse?q=scooter&sortBy=relevance>
+
+[47]: <http://dev.cityofchicago.org/open%20data/2020/09/14/scooter-gbfs-public-feeds-2020.html>
+
+[48]: <https://www.chicago.gov/city/en/depts/cdot/supp_info/escooter-share-pilot-project.html>
+
+[49]: <https://data.cityofchicago.org/Transportation/Divvy-Trips/fg6s-gzvg>
+
+[50]: <https://data.cityofchicago.org/browse?q=taxi&sortBy=relevance>
+
+
+## 6 -- General Transit Feed Specification (GTFS)
 
 Contents. \[TBD\].
 
 Resources. The raw GTFS data for CTA and Metra can be found on
-**OpenMobilityData website**[^51]^,^[^52]. General intro is from
-Google[^53]. The most efficient way to download the data set is through
-the **modules on Github**[^54]^,^[^55].
+**OpenMobilityData website**[[51]],[[52]]. General intro is from
+Google[[53]]. The most efficient way to download the data set is through
+the **modules on Github**[[54.1][54.2]],[[55.1][55.2]].
 
 Remaining questions and TBD. (1) Explore the exact information in GTFS
 data set by using the Github modules.
 
-7 -- General Road Network Flows
+[51]: <https://transitfeeds.com/p/chicago-transit-authority/165?p=1>
+
+[52]: <https://transitfeeds.com/p/metra/169>
+
+[53]: <https://developers.google.com/transit/gtfs>
+
+[54.1]: <https://github.com/remix/partridge>
+
+[54.2]: <https://github.com/kuanb/peartree>
+
+[55.1]: <https://github.com/mrcagney/gtfstk>
+
+[55.2]: <https://github.com/mrcagney/gtfs_kit>
+
+
+## 7 -- General Road Network Flows
 
 Contents. The typical OD matrix and spatiotemporal ridership data sets
 are typically not attached to road segments, however, the broad travel
@@ -211,7 +308,7 @@ road counts in Chicago.
 Remaining questions. (1) How to obtain the high-quality network flow
 data specific to road segment in the urban Chicago area?
 
-8 -- Travel Survey
+## 8 -- Travel Survey
 
 Contents. Travel survey often provides rich cross-sectional data set,
 which is loosely defined since one-day or one-week travel survey is also
@@ -231,7 +328,7 @@ Remaining questions and TBD. (1) Need to know more specifics about the
 travel survey. (2) Use the CMAP survey to create the images + numeric
 data for human dynamics.
 
-9 -- Images
+## 9 -- Images
 
 Contents. Urban images can be aerial images, street view images, land
 use images, and nightlight images. Typically they have the coordinate
@@ -254,7 +351,7 @@ sensing and geography communities.
 Remaining questions: (1) How to collect high-resolution nightlight
 images for Chicago area?
 
-10 -- OpenStreetMap (OSM) and Point-of-Interests (POIs)
+## 10 -- OpenStreetMap (OSM) and Point-of-Interests (POIs)
 
 Contents. OSM and POIs are related, but OSM is a data source, while POIs
 are the data. OSM provide information about road networks, rail
@@ -272,7 +369,7 @@ recommended checking **Chicago Cityscape**[^79][^80] for more details.
 
 Remaining questions. None.
 
-11 -- Mobility-Related Topics
+## 11 -- Mobility-Related Topics
 
 Contents. The topics related to human dynamics include **COVID, energy,
 public health (e.g. air pollution),** and **natural disaster**. These
@@ -299,7 +396,8 @@ be found on **City of Chicago data portal**[^90].
 Remaining questions and TBD: (1) How to obtain travel-energy data? (2)
 What is in the retail electricity sales data?
 
-12 -- Web scraping data
+
+## 12 -- Web scraping data
 
 Contents. Web scraping skills can help to collect the information from
 websites, such as **Yelp, Bookings, Zillow, Twitter, Amazon reviews,
@@ -331,7 +429,7 @@ Twitter, Yelp, and Zillow? (3) How to scrape the images from the
 websites (e.g. Yelp, Zillow, and Airbnb)? (4) How to build up a virtual
 network from Twitter?
 
-13 -- Private data providers
+## 13 -- Private data providers
 
 Contents. With collaboration, private data providers can give us the
 data sources that other people to not have access to. Typically the data
@@ -350,7 +448,7 @@ data sets look like from Cuebiq, Womply, and Mastercard? Do they have
 the individual socio-demographics? (3) What is in the Chicago Cityscape
 data set?
 
-14 -- Others
+## 14 -- Others
 
 Contents. Other data sets include **weather**[^102]^,^[^103] and **call
 detailed records (CDR)** data.
@@ -364,100 +462,9 @@ weather information? (2) Is it possible to get CDR data without private
 collaboration? (3) What happened to city of Milan, where the CDR data is
 open to the public?
 
-[^11]: <https://www.fhwa.dot.gov/planning/census_issues/ctpp/>
 
-[^12]: <https://ctpp.transportation.org/>
 
-[^13]: <https://nhts.ornl.gov/>
 
-[^14]: <https://nhts.dot.ca.gov/>
-
-[^15]: <https://www.nrel.gov/transportation/secure-transportation-data/tsdc-cleansed-data.html>
-
-[^16]: <https://nhts.dot.ca.gov/>
-
-[^17]: <https://www.bts.dot.gov/latch>
-
-[^18]: <https://jtleider.github.io/censusdata/>
-
-[^19]: <https://github.com/jtleider/censusdata>
-
-[^20]: <https://cran.r-project.org/web/packages/tidycensus/tidycensus.pdf>
-
-[^21]: <https://data.census.gov/cedsci/all?g=0500000US17031.100000>
-
-[^22]: <https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/tiger-line-demo-record-layouts.html>
-
-[^23]: <https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-data.html>
-
-[^24]: <https://www2.census.gov/geo/>
-
-[^25]: <https://www2.census.gov/geo/pdfs/reference/guidestloc/>
-
-[^26]: <https://www2.census.gov/geo/pdfs/reference/guidestloc/17_Illinois.pdf>
-
-[^27]: <http://data5.ctpp.transportation.org/ctpp/Browse/browsetables.aspx>
-
-[^28]: <https://github.com/gregmacfarlane/ctpp_flows>
-
-[^29]: <https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-data.html>
-
-[^30]: <https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html>
-
-[^31]: <https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html>
-
-[^32]: <http://www.gis2gps.com/GIS/illcounties/illcounties.html>
-
-[^33]: <https://www.uis.edu/gis/projects/data/>
-
-[^34]: <https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-ZIP-Codes/gdcf-axmw>
-
-[^35]: <https://gis-idot.opendata.arcgis.com/>
-
-[^36]: <https://data.cityofchicago.org/Transportation/Bike-Racks-Map/4ywc-hr3a>
-
-[^37]: <https://data.cityofchicago.org/browse?q=transit&sortBy=relevance&tags=shapefiles>
-
-[^38]: <https://www.fhwa.dot.gov/planning/census_issues/ctpp/>
-
-[^39]: <https://github.com/gregmacfarlane/ctpp_flows>
-
-[^40]: Nelson, G. D. and A. Rae (2016). \"An economic geography of the
-    United States: From commutes to megaregions.\" PloS one 11(11):
-    e0166083.
-
-[^41]: <https://lehd.ces.census.gov/data/#top>
-
-[^42]: <https://lehd.ces.census.gov/data/lodes/LODES7/LODESTechDoc7.5.pdf>
-
-[^43]: Multiscale dynamic human mobility flow dataset in the U.S. during
-    the COVID-19 epidemic.
-
-[^44]: <https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips/m6dm-c72p>
-
-[^45]: <https://data.cityofchicago.org/Transportation/E-Scooter-Trips-2019-Pilot/2kfw-zvte>
-
-[^46]: <https://data.cityofchicago.org/browse?q=scooter&sortBy=relevance>
-
-[^47]: <http://dev.cityofchicago.org/open%20data/2020/09/14/scooter-gbfs-public-feeds-2020.html>
-
-[^48]: <https://www.chicago.gov/city/en/depts/cdot/supp_info/escooter-share-pilot-project.html>
-
-[^49]: <https://data.cityofchicago.org/Transportation/Divvy-Trips/fg6s-gzvg>
-
-[^50]: <https://data.cityofchicago.org/browse?q=taxi&sortBy=relevance>
-
-[^51]: <https://transitfeeds.com/p/chicago-transit-authority/165?p=1>
-
-[^52]: <https://transitfeeds.com/p/metra/169>
-
-[^53]: <https://developers.google.com/transit/gtfs>
-
-[^54]: <https://github.com/remix/partridge>;
-    <https://github.com/kuanb/peartree>
-
-[^55]: <https://github.com/mrcagney/gtfstk>;
-    <https://github.com/mrcagney/gtfs_kit>
 
 [^56]: <https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Congestion-Estimates-by-Se/n4j6-wkkf>
 
