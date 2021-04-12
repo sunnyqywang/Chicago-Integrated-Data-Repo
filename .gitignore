@@ -7,6 +7,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+<<<<<<< HEAD
+=======
+# process folder
+process/
+data/
+
+# credentials
+*/credentials.py
+
+>>>>>>> 8bb85d1cf8d0519692dce4436b0dcc7a0865ddda
 # C extensions
 *.so
 
