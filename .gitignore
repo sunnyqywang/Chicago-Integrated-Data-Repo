@@ -1,6 +1,3 @@
-# process folder
-process/
-data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -15,6 +12,7 @@ data/
 
 # credentials
 */credentials.py
+*/*/setup.py
 
 >>>>>>> 8bb85d1cf8d0519692dce4436b0dcc7a0865ddda
 # C extensions
@@ -40,6 +38,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
